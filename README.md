@@ -1,41 +1,69 @@
-🎓 Nền Tảng Bán Khóa Học Lập Trình Trực Tuyến
-🚀 Giới Thiệu
-Nền tảng bán khóa học lập trình trực tuyến giúp học viên dễ dàng đăng ký, mua và học các khóa lập trình từ cơ bản đến nâng cao. Hệ thống hỗ trợ quản lý khóa học, đơn hàng và tiến trình học tập một cách hiệu quả.
+🎓 Online Coding Course - Hệ thống khoá học lập trình trực tuyến
+📌 Giới thiệu
+Online Coding Course là nền tảng học lập trình trực tuyến giúp người dùng dễ dàng tiếp cận kiến thức và nâng cao kỹ năng lập trình. Hệ thống cung cấp:
+✅ Khoá học đa dạng về các ngôn ngữ lập trình (Python, Java, JavaScript, v.v.)
+✅ Video bài giảng chất lượng cao
+✅ Bài tập thực hành và chấm điểm tự động
+✅ Quản lý học viên và theo dõi tiến độ
 
-Công nghệ sử dụng:
+🛠 Công nghệ sử dụng
+🔹 Backend: Spring Boot + SQL Server
+🔹 Frontend: Html, Css
+🔹 Database: SQL Server + MongoDB
 
-Spring Boot - Xây dựng backend API, xử lý nghiệp vụ
-Thymeleaf - Hiển thị giao diện người dùng
-SQL Server - Quản lý dữ liệu có cấu trúc như người dùng, đơn hàng
-MongoDB - Lưu trữ nội dung khóa học linh hoạt
-Spring Security - Xác thực & phân quyền người dùng
-🔥 Tính Năng Chính
-🎯 Đối với Người Dùng (Học Viên)
-Đăng ký, đăng nhập & quản lý tài khoản
-Tìm kiếm & mua khóa học
-Học trực tuyến với bài giảng video, tài liệu
-Theo dõi tiến trình học tập
-🛠 Đối với Quản Trị Viên
-Quản lý người dùng & phân quyền
-Quản lý danh sách khóa học
-Theo dõi & duyệt đơn hàng
-Thống kê doanh thu
-⚡ Hướng Dẫn Cài Đặt
-1️⃣ Cấu hình cơ sở dữ liệu
-SQL Server:
-MongoDB:
-2️⃣ Cài đặt & chạy Backend
+🚀 Cài đặt & Chạy dự án
+1️⃣ Clone repo về máy
 bash
 Sao chép
 Chỉnh sửa
-git clone https://github.com/your-repo.git
-cd your-repo
-mvn clean install
-mvn spring-boot:run
-3️⃣ Truy cập giao diện
-Trang chủ: http://localhost:8080
-Trang quản trị: http://localhost:8080/admin
-📬 Liên Hệ
-Email:
-Website:
-💡 Học lập trình dễ dàng hơn với nền tảng của chúng tôi! 🚀
+git clone git@github.com:ZeroXelx12c/online-courses.git  
+cd online-courses 
+2️⃣ Cài đặt Backend
+bash
+Sao chép
+Chỉnh sửa
+cd backend  
+mvn clean install  
+mvn spring-boot:run  
+3️⃣ Cài đặt Frontend
+bash
+Sao chép
+Chỉnh sửa
+cd frontend  
+npm install  
+npm start  
+🔥 Tính năng chính
+📌 Người dùng
+🔹 Đăng ký / Đăng nhập tài khoản
+🔹 Xem danh sách khoá học
+🔹 Học qua video và làm bài tập
+🔹 Theo dõi tiến trình học
+
+📌 Quản trị viên
+🔹 Quản lý khoá học, bài giảng
+🔹 Thống kê số lượng học viên
+🔹 Kiểm duyệt nội dung
+
+🎯 Lộ trình phát triển
+✅ Hoàn thiện hệ thống bài giảng
+✅ Thêm bài tập thực hành tự động chấm điểm
+⬜ Hỗ trợ chứng chỉ hoàn thành khoá học
+⬜ Xây dựng diễn đàn thảo luận
+
+💡 Đóng góp & Phát triển
+Bạn muốn đóng góp cho dự án? Hãy làm theo các bước sau:
+
+Fork repo này
+Tạo một branch mới: feature/tinh-nang-moi
+Gửi pull request
+Mọi ý kiến đóng góp xin gửi về 📧 0nguyenthengoc@gmail.com
+
+📄 License
+📌 Dự án này được phát hành theo giấy phép MIT.
+
+🎉 Kết nối với chúng tôi
+📌 Website: [Đang cập nhật]
+📌 Facebook: [Đang cập nhật]
+📌 Hotline: [Đang cập nhật]
+
+🚀 Hãy tham gia cùng chúng tôi để tạo ra nền tảng học lập trình trực tuyến tốt nhất! 🚀
