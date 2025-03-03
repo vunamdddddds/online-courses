@@ -41,7 +41,7 @@ Online Coding Course là nền tảng học lập trình trực tuyến giúp ng
 
 🔹 Thống kê số lượng học viên
 
-🔹 Kiểm duyệt nội dung
+🔹 Xem báo cáo thống kê
 
 🎯 Lộ trình phát triển
 
