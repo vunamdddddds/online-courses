@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Học Lập trình Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/course-list.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">HỌC LẬP TRÌNH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dskhoahoc.html">Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/news.html">Tin tức</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <span sec:authorize="isAuthenticated()">Xin chào<span th:text="${#authentication.name}"></span></span>
+                    <a th:href="@{/logout}" sec:authorize="isAuthenticated()" class="btn btn-custom ms-2">Đăng xuất</a>
+                    <a th:href="@{/login}" sec:authorize="!isAuthenticated()" class="btn btn-custom">Đăng nhập</a>
+                    <a th:href="@{/register}" sec:authorize="!isAuthenticated()" class="btn btn-outline ms-2">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+    </section>
+
+    <!-- Navigation and Hero Section (same as before) -->
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section py-5">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="row mb-4">
+                <div class="col-md-8 offset-md-2">
+                    <form class="d-flex" id="searchForm" data-aos="fade-up">
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Tìm kiếm khóa học..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center flex-wrap" id="filterBar">
+                        <select class="form-select me-3 mb-2" id="yearFilter" style="width: auto;" data-aos="fade-up">
+                            <option selected value="">Năm xuất bản</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                        <select class="form-select me-3 mb-2" id="topicFilter" style="width: auto;" data-aos="fade-up">
+                            <option selected value="">Chủ đề</option>
+                            <option value="web">Lập trình Web</option>
+                            <option value="mobile">Lập trình Mobile</option>
+                            <option value="data">Khoa học dữ liệu</option>
+                        </select>
+                        <select class="form-select me-3 mb-2" id="feeFilter" style="width: auto;" data-aos="fade-up">
+                            <option selected value="">Phí học</option>
+                            <option value="free">Miễn phí</option>
+                            <option value="paid">Trả phí</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Grid Section -->
+    <section class="course-grid-section py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="courseGrid">
+                <!-- Course Cards will be dynamically populated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as before) -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const courses = [
+            {
+                title: "Lập trình Web cơ bản",
+                description: "Khóa học lập trình web cơ bản dành cho người mới bắt đầu.",
+                year: "2023",
+                topic: "web",
+                fee: "free",
+                image: "/images/course1.jpg"
+            },
+            {
+                title: "Lập trình Mobile nâng cao",
+                description: "Khóa học lập trình mobile nâng cao với các công nghệ mới nhất.",
+                year: "2022",
+                topic: "mobile",
+                fee: "paid",
+                image: "/images/course2.jpg"
+            },
+            {
+                title: "Khoa học dữ liệu cơ bản",
+                description: "Khóa học khoa học dữ liệu cơ bản dành cho người mới bắt đầu.",
+                year: "2021",
+                topic: "data",
+                fee: "free",
+                image: "/images/course3.jpg"
+            },
+            {
+                title: "Khoa học dữ liệu cơ bản",
+                description: "Khóa học khoa học dữ liệu cơ bản dành cho người mới bắt đầu.",
+                year: "2021",
+                topic: "data",
+                fee: "free",
+                image: "/images/course3.jpg"
+            }
+        ];
+
+        function displayCourses(filteredCourses) {
+            const courseGrid = document.getElementById('courseGrid');
+            courseGrid.innerHTML = ''; // Clear existing courses
+
+            filteredCourses.forEach(course => {
+                const courseCard = `
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="${course.image}" class="card-img-top" alt="${course.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${course.title}</h5>
+                                <p class="card-text">${course.description}</p>
+                                <p class="card-text"><small class="text-muted">Năm xuất bản: ${course.year}</small></p>
+                                <p class="card-text"><small class="text-muted">Chủ đề: ${course.topic}</small></p>
+                                <p class="card-text"><small class="text-muted">Phí học: ${course.fee}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                courseGrid.innerHTML += courseCard;
+            });
+        }
+
+        function filterCourses() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const yearFilter = document.getElementById('yearFilter').value;
+            const topicFilter = document.getElementById('topicFilter').value;
+            const feeFilter = document.getElementById('feeFilter').value;
+
+            const filteredCourses = courses.filter(course => {
+                const matchesSearch = course.title.toLowerCase().includes(searchTerm) || 
+                                    course.description.toLowerCase().includes(searchTerm);
+                const matchesYear = yearFilter ? course.year === yearFilter : true;
+                const matchesTopic = topicFilter ? course.topic === topicFilter : true;
+                const matchesFee = feeFilter ? course.fee === feeFilter : true;
+
+                return matchesSearch && matchesYear && matchesTopic && matchesFee;
+            });
+
+            displayCourses(filteredCourses);
+        }
+
+        // Add event listeners for real-time filtering
+        document.getElementById('searchInput').addEventListener('input', filterCourses);
+        document.getElementById('yearFilter').addEventListener('change', filterCourses);
+        document.getElementById('topicFilter').addEventListener('change', filterCourses);
+        document.getElementById('feeFilter').addEventListener('change', filterCourses);
+
+        // Initial display of all courses
+        displayCourses(courses);
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Về chúng tôi</h3>
+                        <p>Học Lập trình Online - Nơi chắp cánh ước mơ lập trình viên với các khóa học chất lượng cao.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Liên kết nhanh</h3>
+                        <div class="footer-links">
+                            <a href="/courses">Khóa học</a>
+                            <a href="/news">Tin tức</a>
+                            <a href="/register">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Kết nối</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Học Lập trình Online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

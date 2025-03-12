@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức - Học Lập trình Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/news.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">HỌC LẬP TRÌNH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dskhoahoc.html">Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/news.html">Tin tức</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <span sec:authorize="isAuthenticated()">Xin chào<span th:text="${#authentication.name}"></span></span>
+                    <a th:href="@{/logout}" sec:authorize="isAuthenticated()" class="btn btn-custom ms-2">Đăng xuất</a>
+                    <a th:href="@{/login}" sec:authorize="!isAuthenticated()" class="btn btn-custom">Đăng nhập</a>
+                    <a th:href="@{/register}" sec:authorize="!isAuthenticated()" class="btn btn-outline ms-2">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="spacewhile">
+       
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section py-5">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Tin tức mới nhất</h2>
+                <p>Cập nhật những tin tức và xu hướng lập trình mới nhất</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-image">
+                        <img src="/images/news2.jpg" alt="News 2">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Những công nghệ AI đáng chú ý trong năm 2025</h3>
+                        <p class="news-date">Ngày đăng: 09/03/2025</p>
+                        <p class="news-excerpt">AI đang ngày càng phát triển với nhiều ứng dụng đột phá. Hãy cùng khám phá những công nghệ AI nổi bật nhất năm nay...</p>
+                        <a href="/news/ai-trends" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-image">
+                        <img src="/images/news3.jpg" alt="News 3">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Tại sao TypeScript ngày càng phổ biến?</h3>
+                        <p class="news-date">Ngày đăng: 08/03/2025</p>
+                        <p class="news-excerpt">TypeScript mang lại nhiều lợi ích so với JavaScript thuần. Hãy tìm hiểu vì sao các công ty lớn lại chuyển sang TypeScript...</p>
+                        <a href="/news/typescript-popularity" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-card" data-aos="fade-up">
+                    <div class="news-image">
+                        <img src="/images/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Hướng dẫn sử dụng React Hooks hiệu quả</h3>
+                        <p class="news-date">Ngày đăng: 10/03/2025</p>
+                        <p class="news-excerpt">React Hooks giúp bạn tối ưu hóa cách quản lý trạng thái trong ứng dụng. Bài viết này sẽ hướng dẫn cách sử dụng chúng...</p>
+                        <a href="/news/react-hooks" class="btn btn-custom">Đọc tiếp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Về chúng tôi</h3>
+                        <p>Học Lập trình Online - Nơi chắp cánh ước mơ lập trình viên với các khóa học chất lượng cao.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Liên kết nhanh</h3>
+                        <div class="footer-links">
+                            <a href="/courses">Khóa học</a>
+                            <a href="/news">Tin tức</a>
+                            <a href="/register">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <h3 class="footer-title">Kết nối</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Học Lập trình Online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
