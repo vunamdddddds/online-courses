@@ -16,7 +16,7 @@ Online Coding Course là nền tảng học lập trình trực tuyến giúp ng
 
 🔹 Backend: Spring Boot + SQL Server
 
-🔹 Frontend: Html, Css
+🔹 Frontend: Html, Css , taiwincss
 
 🔹 Database: SQL Server + MongoDB
 
